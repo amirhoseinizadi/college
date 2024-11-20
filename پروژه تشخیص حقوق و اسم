@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int b = sc.nextInt();
+        sc.nextLine();  
+
+        String[] names = new String[b]; 
+        int[] numbers = new int[b]; 
+
+        for (int i = 0; i < b; i++) {
+            names[i] = sc.nextLine();
+        }
+
+        for (int i = 0; i < b; i++) {
+            numbers[i] = sc.nextInt();
+        }
+
+        sc.close(); 
+
+        for (int i = 0; i < b; i++) {
+            if (names[i].equals("ali") || names[i].equals("reza") || names[i].equals("hossein")) {
+                  System.out.println((i + 1) + " - " + names[i]);
+            }
+            if (numbers[i] >= 3472200) {
+                  System.out.println((i + 1) + " - " + names[i] + " " + "income : " + numbers[i]);
+            }
+        }
+    }
+}
